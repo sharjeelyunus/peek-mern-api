@@ -9,7 +9,8 @@ router.get('/:pid', placesControllers.getPlaceById);
 
 router.get('/user/:uid', placesControllers.getPlacesByUserId);
 
-router.post('/',
+router.post(
+    '/',
     [
         check('title')
             .not()
@@ -22,7 +23,15 @@ router.post('/',
     placesControllers.createPlace
 );
 
-router.patch('/:pid', placesControllers.updatePlace);
+router.patch(
+    '/:pid',
+    [
+        check('title')
+            .not()
+            .isEmpty(),
+        check('description').isLength({ min: 5 }),
+    ],
+    placesControllers.updatePlace);
 
 router.delete('/:pid', placesControllers.deletePlace);
 
