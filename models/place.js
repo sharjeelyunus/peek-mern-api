@@ -3,15 +3,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const placeSchema = new Schema({
-    title: { type: String, requried: true },
-    description: { type: String, requried: true },
-    image: { type: String, requried: true },
-    address: { type: String, requried: true },
+    title: { type: String, required: true },
+    description: { type: String, required: true },
+    image: { type: String, required: true },
+    address: { type: String, required: true },
     location: {
-        lat: { type: Number, requried: true },
-        lng: { type: Number, requried: true }
+        lat: { type: Number, required: true },
+        lng: { type: Number, required: true }
     },
-    creator: { type: mongoose.Types.ObjectId, requried: true, ref: 'User' }
+    creator: { type: mongoose.Types.ObjectId, required: true, ref: 'User' }
 });
 
 module.exports = mongoose.model('Place', placeSchema);
