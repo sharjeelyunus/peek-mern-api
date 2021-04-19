@@ -49,7 +49,7 @@ app.use((error, req, res, next) => {
 
 mongoose
     .connect(
-        `mongodb+srv://manu:sharjeel@cluster0.m8g71.mongodb.net/mern?retryWrites=true&w=majority`
+        `mongodb://manu:sharjeel@cluster0-shard-00-00.m8g71.mongodb.net:27017,cluster0-shard-00-01.m8g71.mongodb.net:27017,cluster0-shard-00-02.m8g71.mongodb.net:27017/mern?ssl=true&replicaSet=atlas-hjlyyo-shard-0&authSource=admin&retryWrites=true&w=majority`
     )
     .then(() => {
         app.listen(5000);
