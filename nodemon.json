@@ -1,8 +1,8 @@
 {
     "env": {
-        "DB_USER": "manu",
-        "DB_PASSWORD": "sharjeel",
-        "DB_NAME": "mern",
+        "DB_USER": "peeksharjeel",
+        "DB_PASSWORD": "yOSCp216GYjjPNoE",
+        "DB_NAME": "mern-prod",
         "JWP_KEY": "supersecret_dont_share"
     }
 }
